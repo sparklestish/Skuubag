@@ -13,7 +13,7 @@ This WAEC RESULTS CHECKER APP is the all-purpose solution for checking WAEC RESU
     <author email="richardneaverscoy@gmail.com" href="#">
          BECE AND WAEC SCRATCH CARDS
     </author>
-    <!-- <plugin name="org.apache.cordova.inappbrowser" source="npm" /> -->
+    <plugin name="org.apache.cordova.inappbrowser.InAppBrowser" source="npm" />
     <plugin spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />
     <preference name="CrosswalkAnimatable" value="true" />
     <content src="index.html" />
