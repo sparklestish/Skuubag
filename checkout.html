@@ -17,8 +17,8 @@
          <link href="styles/mfb.css" rel="stylesheet"> -->
       <link rel="stylesheet" href="css/style.css">
       <script type="text/javascript" src="cordova.js"></script>
-      <script type="text/javascript" src="inappbrowser.js"></script>
-       <script type="text/javascript" src="notification.js"></script>
+      <script type="text/javascript" src="inappbrowser.js"></script><!-- 
+       <script type="text/javascript" src="notification.js"></script> -->
       <script type="text/javascript" src="scripts/jq.js"></script>
        <script type="text/javascript">
          // Wait for device API libraries to load
@@ -91,39 +91,40 @@
 
 
 var phonenum=getQueryVariable("phonenum");
+var fullname=getQueryVariable("fullname");
 var country= getQueryVariable("country");
 
-// alert(phonenum);
+// alert(fullname);
      $(document).ready(function() {
 
-          $.getJSON('http://waecresultschecker.com/userinfodisplay.php?phonenum='+phonenum, function(jd) {  
+          $.getJSON('https://waecresultschecker.com/userinfodisplay.php?phonenum='+phonenum, function(jd) {  
           
            //   $('#logged_in_user').val(jd.username);
            // $('#user_email').val(jd.email);
          // document.getElementById('user_email').value = jd.username;
       
            $('#logged_in_user').html(jd.fullname);
-         $('#user_email').html(jd.email);
+         // $('#user_email').html(jd.email);
       
        var menucard = document.getElementById('menu'); //or grab it by tagname etc
-         menucard.href="menu.html?phonenum="+jd.phone+"&country=ghana";
+         menucard.href="menu.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
          var newbuycard = document.getElementById('buy_card'); //or grab it by tagname etc
-         newbuycard.href="checkout.html?phonenum="+jd.phone+"&country=ghana";
+         newbuycard.href="checkout.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
           var newcheckresults = document.getElementById('check_results'); //or grab it by tagname etc
-         newcheckresults.href = "checkResults.html?phonenum="+jd.phone+"&country=ghana";
+         newcheckresults.href = "checkResults.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
  var newbuycard_placement = document.getElementById('buy_placementcard'); //or grab it by tagname etc
-         newbuycard_placement.href="checkout-placement.html?phonenum="+jd.phone+"&country=ghana";
+         newbuycard_placement.href="checkout-placement.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
         var newcheckresults_placement = document.getElementById('check_placementresults'); //or grab it by tagname etc
-         newcheckresults_placement.href = "checkPlacementResults.html?phonenum="+jd.phone+"&country=ghana";
+         newcheckresults_placement.href = "checkPlacementResults.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
      
 
           var contactusUrl = document.getElementById('contact_us'); //or grab it by tagname etc
-         contactusUrl.href = "contact.html?phonenum="+jd.phone+"&country=ghana";
+         contactusUrl.href = "contact.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
 });
         });
@@ -139,7 +140,7 @@ var country= getQueryVariable("country");
    //var phonenum = window.location.search.substring(10);
      $(document).ready(function() {
 
-          $.getJSON('http://waecresultschecker.com/cardinfo.php', function(cd) {  
+          $.getJSON('https://waecresultschecker.com/cardinfo.php', function(cd) {  
           
          var pfdb = cd.fee;
 
@@ -198,7 +199,7 @@ var country= getQueryVariable("country");
     {
        $.ajax({
         type: "GET",
-        url: "http://waecresultschecker.com/cronJob.php?card_type="+cardtype,
+        url: "https://waecresultschecker.com/cronJob.php?card_type="+cardtype,
         data: cardtype,
         crossDomain: true,
         cache: false,
@@ -564,7 +565,7 @@ window.onclick = function(event) {
     </div>
   </div>
       <div class="col-sm-6" style="width: 100%;">
-
+         <input class="md-input" type="hidden" name="logged_in_user" id="logged_in_user">
       <div class="app-container">
       <form method="post">
          <div class="items-holder">
@@ -573,9 +574,9 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount">GH¢ 8.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 1 Card</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount">GH¢ 12.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 1 Card</span></p>
                </div>
-                 <input class="md-input" type="hidden" name="unitprice" id="unitprice" value="8.00" >
+                 <input class="md-input" type="hidden" name="unitprice" id="unitprice" value="12.00" >
                  <input class="md-input" type="hidden" name="name" id="name" value="WAEC RESULTS CARD" >
                  <input class="md-input" type="hidden" name="quantity" id="quantity" value="1" >
             
@@ -604,9 +605,9 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount2">GH¢ 16.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 2 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount2">GH¢ 24.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 2 Cards</span></p>
                </div>
-                 <input class="md-input" type="hidden" name="unitprice2" id="unitprice2" value="8.00" >
+                 <input class="md-input" type="hidden" name="unitprice2" id="unitprice2" value="12.00" >
                  <input class="md-input" type="hidden" name="name2" id="name2" value="WAEC RESULTS CARD" >
                  <input class="md-input" type="hidden" name="quantity2" id="quantity2" value="2" >
             
@@ -635,9 +636,9 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount3">GH¢ 24.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 3 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount3">GH¢ 36.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 3 Cards</span></p>
                </div>
-                 <input class="md-input" type="hidden" name="unitprice3" id="unitprice3" value="8.00" >
+                 <input class="md-input" type="hidden" name="unitprice3" id="unitprice3" value="12.00" >
                  <input class="md-input" type="hidden" name="name3" id="name3" value="WAEC RESULTS CARD" >
                  <input class="md-input" type="hidden" name="quantity3" id="quantity3" value="3" >
             
@@ -671,9 +672,9 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount5">GH¢ 40.00</span> <span style="float: right; padding-right: 10px;">Quantity: 5 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount5">GH¢ 60.00</span> <span style="float: right; padding-right: 10px;">Quantity: 5 Cards</span></p>
                </div>
-                 <input class="md-input" type="hidden" name="unitprice5" id="unitprice5" value="8.00" >
+                 <input class="md-input" type="hidden" name="unitprice5" id="unitprice5" value="12.00" >
                  <input class="md-input" type="hidden" name="name5" id="name5" value="WAEC RESULTS CARD" >
                  <input class="md-input" type="hidden" name="quantity5" id="quantity5" value="5" >
             
@@ -704,9 +705,9 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount10">GH¢ 80.00</span> <span style="float: right; padding-right: 10px;">Quantity: 10 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount10">GH¢ 120.00</span> <span style="float: right; padding-right: 10px;">Quantity: 10 Cards</span></p>
                </div>
-                 <input class="md-input" type="hidden" name="unitprice10" id="unitprice10" value="8.00" >
+                 <input class="md-input" type="hidden" name="unitprice10" id="unitprice10" value="12.00" >
                  <input class="md-input" type="hidden" name="name10" id="name10" value="WAEC RESULTS CARD" >
                  <input class="md-input" type="hidden" name="quantity10" id="quantity10" value="10" >
             
@@ -754,7 +755,9 @@ window.onclick = function(event) {
             var name=$("#name").val();
             var unitprice = $("#unitprice").val(); 
             var quantity = $("#quantity").val(); 
+            // var userName = $("#logged_in_user").val();
             var total = unitprice*quantity;
+
 
             // var phone=$("#phonenum").val();
             // var dataString="phonenum="+phone;
@@ -776,15 +779,17 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "http://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&fullname="+fullname,
                // data: dataString,
-                
+                crossDomain: true,
+                cache: false,
+                dataType:'json',
                 success: function (status)
                 {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew = "http://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&phonenumber="+phonenum;
+                    var urlnew = "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&phonenumber="+phonenum+"&fullname="+fullname;
                     var ref = cordova.InAppBrowser.open(urlnew, '_blank', 'location=yes');  
                   }
                   else 
@@ -823,7 +828,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "http://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2,
                // data: dataString,
                 
                 success: function (status)
@@ -831,7 +836,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew2 = "http://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"&phonenumber="+phonenum;
+                    var urlnew2 = "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"&phonenumber="+phonenum;
                     var ref = cordova.InAppBrowser.open(urlnew2, '_blank', 'location=yes');  
                   }
                   else 
@@ -870,7 +875,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "http://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3,
                // data: dataString,
                 
                 success: function (status)
@@ -878,7 +883,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew3 = "http://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"&phonenumber="+phonenum;
+                    var urlnew3 = "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"&phonenumber="+phonenum;
                     var ref = cordova.InAppBrowser.open(urlnew3, '_blank', 'location=yes');  
                   }
                   else 
@@ -916,7 +921,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "http://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5,
                // data: dataString,
                 
                 success: function (status)
@@ -924,7 +929,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew5 = "http://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"&phonenumber="+phonenum;
+                    var urlnew5 = "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"&phonenumber="+phonenum;
                     var ref = cordova.InAppBrowser.open(urlnew5, '_blank', 'location=yes');  
                   }
                   else 
@@ -963,7 +968,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "http://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10,
                // data: dataString,
                 
                 success: function (status)
@@ -971,7 +976,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew10 = "http://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"&phonenumber="+phonenum;
+                    var urlnew10 = "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"&phonenumber="+phonenum;
                     var ref = cordova.InAppBrowser.open(urlnew10, '_blank', 'location=yes');  
                   }
                   else 
@@ -987,7 +992,7 @@ window.onclick = function(event) {
 
       //       $.ajax({
       //   type: "POST",
-      //   url: "http://waecresultschecker.com/checkout/checkout.php",
+      //   url: "https://waecresultschecker.com/checkout/checkout.php",
       //   data: dataString,
         // crossDomain: true,
         // cache: false,

@@ -166,7 +166,7 @@
       </div>
 
        
-      <div class="col-sm-6">
+      <div class="col-sm-12">
         <div class="md-form-group float-label">
           <select class="md-input">
               <option selected="selected"> (+233)  Ghana</option>
@@ -174,10 +174,19 @@
           
         </div>
       </div>
+
+
       <div class="col-sm-6">
         <div class="md-form-group float-label">
           <input class="md-input" type="text" name="phonenum" id="phonenum"  onkeypress="return isNumberKey(event)" onKeyDown="limitText(this,10);" 
-onKeyUp="limitText(this,10);" placeholder="eg. 0269852365" required>
+onKeyUp="limitText(this,10);" placeholder="Mobile Number eg. 0269852365" required>
+             
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="md-form-group float-label">
+          <input class="md-input" type="text" name="fullname" id="fullname" placeholder="Your Full Name  eg. Francis Kpoe" required>
              
         </div>
       </div>
@@ -232,13 +241,14 @@ onKeyUp="limitText(this,10);" placeholder="eg. 0269852365" required>
 // });
     
       var phone=$("#phonenum").val();
-      var dataString="phonenum="+phone;
+      var fullname=$("#fullname").val();
+      var dataString="phonenum="+phone+"&fullname="+fullname;
    
       if($.trim(phone).length>0)
     {
       $.ajax({
         type: "GET",
-        url: "http://waecresultschecker.com/verify.php",
+        url: "https://waecresultschecker.com/verify.php",
         data: dataString,
         crossDomain: true,
         cache: false,
@@ -267,7 +277,7 @@ onKeyUp="limitText(this,10);" placeholder="eg. 0269852365" required>
             $("#verify").val('Verify');
                 } 
                 else { 
-            var URL = "activate.html?phonenum="+phone;
+            var URL = "activate.html?phonenum="+phone+"&fullname="+fullname;
             setTimeout(function(){ window.location = URL; }, 2000);
                       
                     }  

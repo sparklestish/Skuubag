@@ -64,7 +64,7 @@
 // alert(phonenum);
      $(document).ready(function() {
 
-          $.getJSON('http://waecresultschecker.com/userinfodisplay.php?phonenum='+phonenum, function(jd) {  
+          $.getJSON('https://waecresultschecker.com/userinfodisplay.php?phonenum='+phonenum, function(jd) {  
           
            //   $('#logged_in_user').val(jd.username);
            // $('#user_email').val(jd.email);
@@ -72,23 +72,23 @@
        
        // alert(jd.fullname);
            $('#logged_in_user').val(jd.fullname);
-         $('#user_email').val(jd.email);
+         //$('#user_email').val(jd.email);
      
 
          var newbuycard = document.getElementById('buy_card'); //or grab it by tagname etc
-         newbuycard.href="checkout.html?phonenum="+jd.phone+"&country=ghana";
+         newbuycard.href="checkout.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
           var newbuycard_placement = document.getElementById('buy_placementcard'); //or grab it by tagname etc
-         newbuycard_placement.href="checkout-placement.html?phonenum="+jd.phone+"&country=ghana";
+         newbuycard_placement.href="checkout-placement.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
           var newcheckresults = document.getElementById('check_results'); //or grab it by tagname etc
-         newcheckresults.href = "checkResults.html?phonenum="+jd.phone+"&country=ghana";
+         newcheckresults.href = "checkResults.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
              var newcheckresults_placement = document.getElementById('check_placementresults'); //or grab it by tagname etc
-         newcheckresults_placement.href = "checkPlacementResults.html?phonenum="+jd.phone+"&country=ghana";
+         newcheckresults_placement.href = "checkPlacementResults.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
           var contactusUrl = document.getElementById('contact_us'); //or grab it by tagname etc
-         contactusUrl.href = "contact.html?phonenum="+jd.phone+"&country=ghana";
+         contactusUrl.href = "contact.html?phonenum="+jd.phone+"&fullname="+jd.fullname+"&country=ghana";
 
 });
         });

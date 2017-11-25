@@ -208,13 +208,14 @@ onKeyUp="limitText(this,5);" placeholder="your 5 digit code" required>
     
       var phone=$("#phonenum").val();
       var code=$("#code").val();
+
       var dataString="phonenum="+phone+"&code="+code;
    
       if($.trim(phone).length>0 & $.trim(code).length>0)
     {
       $.ajax({
         type: "GET",
-        url: "http://waecresultschecker.com/activate.php",
+        url: "https://waecresultschecker.com/activate.php",
         data: dataString,
         crossDomain: true,
         cache: false,
