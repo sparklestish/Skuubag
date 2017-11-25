@@ -158,9 +158,9 @@ var country= getQueryVariable("country");
 
         var totam = a*q;
         var totam2 = b*q2;
-        var totam3 = c*q3;
-        var totam5 = d*q5;
-        var totam10 = e*q10;
+        var totam3 = (c*q3)-4;
+        var totam5 = (d*q5)-12;
+        var totam10 = (e*q10)-20;
        
        // alert(jd.fullname);
          $('#bamount').html(totam);
@@ -636,7 +636,7 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount3">GH¢ 36.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 3 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount3">GH¢ 32.00 </span> <span style="float: right; padding-right: 10px;">Quantity: 3 Cards</span></p>
                </div>
                  <input class="md-input" type="hidden" name="unitprice3" id="unitprice3" value="12.00" >
                  <input class="md-input" type="hidden" name="name3" id="name3" value="WAEC RESULTS CARD" >
@@ -672,7 +672,7 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount5">GH¢ 60.00</span> <span style="float: right; padding-right: 10px;">Quantity: 5 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount5">GH¢ 48.00</span> <span style="float: right; padding-right: 10px;">Quantity: 5 Cards</span></p>
                </div>
                  <input class="md-input" type="hidden" name="unitprice5" id="unitprice5" value="12.00" >
                  <input class="md-input" type="hidden" name="name5" id="name5" value="WAEC RESULTS CARD" >
@@ -705,7 +705,7 @@ window.onclick = function(event) {
                   
                   <img class="product-img" src="images/waecscratchcard.jpg" style="padding-bottom: 15px;" />
                   <p class="product-name"> <b>WAEC RESULTS CHECKER CARD</b></p>
-                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount10">GH¢ 120.00</span> <span style="float: right; padding-right: 10px;">Quantity: 10 Cards</span></p>
+                  <p nclass="product-price"><img src="images/price-tag.png" width="20px" height="20px" style="margin-right: 5px;">GH¢ <span id="bamount10">GH¢ 100.00</span> <span style="float: right; padding-right: 10px;">Quantity: 10 Cards</span></p>
                </div>
                  <input class="md-input" type="hidden" name="unitprice10" id="unitprice10" value="12.00" >
                  <input class="md-input" type="hidden" name="name10" id="name10" value="WAEC RESULTS CARD" >
@@ -856,7 +856,7 @@ window.onclick = function(event) {
             var name3=$("#name3").val();
             var unitprice3 = $("#unitprice3").val(); 
             var quantity3 = $("#quantity3").val(); 
-             var total3 = unitprice3*quantity3;
+             var total3 = (unitprice3*quantity3)-4;
             unitprice3 = $.trim(unitprice3);
           
 
@@ -902,7 +902,7 @@ window.onclick = function(event) {
             var name5=$("#name5").val();
             var unitprice5 = $("#unitprice5").val(); 
             var quantity5 = $("#quantity5").val(); 
-             var total5 = unitprice5*quantity5;
+             var total5 = (unitprice5*quantity5)-12;
             unitprice5 = $.trim(unitprice5);
           
 
@@ -949,7 +949,7 @@ window.onclick = function(event) {
             var name10=$("#name10").val();
             var unitprice10 = $("#unitprice10").val();
             var quantity10 = $("#quantity10").val();  
-             var total10 = unitprice10*quantity10;
+             var total10 = (unitprice10*quantity10)-20;
             unitprice10 = $.trim(unitprice10);
           
 
