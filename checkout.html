@@ -94,6 +94,9 @@ var phonenum=getQueryVariable("phonenum");
 var fullname=getQueryVariable("fullname");
 var country= getQueryVariable("country");
 
+//alert(phonenum);
+//document.getElementById('phonenumberdiv').value = phonenum;
+//$('#phonenumberdiv').html(phonenum);
 // alert(fullname);
      $(document).ready(function() {
 
@@ -101,8 +104,9 @@ var country= getQueryVariable("country");
           
            //   $('#logged_in_user').val(jd.username);
            // $('#user_email').val(jd.email);
-         // document.getElementById('user_email').value = jd.username;
-      
+        
+           //$('#phonenumberdiv').value(phonenum);
+       
            $('#logged_in_user').html(jd.fullname);
          // $('#user_email').html(jd.email);
       
@@ -567,7 +571,12 @@ window.onclick = function(event) {
       <div class="col-sm-6" style="width: 100%;">
          <input class="md-input" type="hidden" name="logged_in_user" id="logged_in_user">
       <div class="app-container">
+
+     <!--  <div id="phonenumberdiv"></div> -->
+
       <form method="post">
+
+
          <div class="items-holder">
             <div class="mp-cart-items" >
                <div class="product">
@@ -749,15 +758,18 @@ window.onclick = function(event) {
       <!-- endbuild -->
       <script type="text/javascript">
          $(document).ready(function() {
+           var phonenumber = phonenum;
+          
           
           $("#onecard").click(function(event) {
 
             var name=$("#name").val();
             var unitprice = $("#unitprice").val(); 
             var quantity = $("#quantity").val(); 
-            // var userName = $("#logged_in_user").val();
+            // var phonecard1 = $("#phonenumberdiv").val();
+           
             var total = unitprice*quantity;
-
+             
 
             // var phone=$("#phonenum").val();
             // var dataString="phonenum="+phone;
@@ -774,12 +786,12 @@ window.onclick = function(event) {
               return;
             }
 
-
+     
 
             $.ajax(
               {
                  type: "GET",
-                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&fullname="+fullname,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
                 crossDomain: true,
                 cache: false,
@@ -789,15 +801,18 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew = "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&phonenumber="+phonenum+"&fullname="+fullname;
+                    var urlnew = "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&userphone="+phonenumber+"&fullname="+fullname;
+                    //console.log(phonenumber);
                     var ref = cordova.InAppBrowser.open(urlnew, '_blank', 'location=yes');  
                   }
                   else 
                   {
                     //alert(status);
                     alert("Sorry, we could not process your request, please try again");
+                    alert(phonenum);
                   }
                 }
+
               });
             });
 
@@ -828,7 +843,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
                 
                 success: function (status)
@@ -836,7 +851,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew2 = "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"&phonenumber="+phonenum;
+                    var urlnew2 = "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"&userphone="+phonenumber+"&fullname="+fullname;
                     var ref = cordova.InAppBrowser.open(urlnew2, '_blank', 'location=yes');  
                   }
                   else 
@@ -875,7 +890,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
                 
                 success: function (status)
@@ -883,7 +898,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew3 = "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"&phonenumber="+phonenum;
+                    var urlnew3 = "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"&userphone="+phonenumber+"&fullname="+fullname;
                     var ref = cordova.InAppBrowser.open(urlnew3, '_blank', 'location=yes');  
                   }
                   else 
@@ -921,7 +936,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
                 
                 success: function (status)
@@ -929,7 +944,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew5 = "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"&phonenumber="+phonenum;
+                    var urlnew5 = "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"&userphone="+phonenumber+"&fullname="+fullname;
                     var ref = cordova.InAppBrowser.open(urlnew5, '_blank', 'location=yes');  
                   }
                   else 
@@ -968,7 +983,7 @@ window.onclick = function(event) {
             $.ajax(
               {
                  type: "GET",
-                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10,
+                url: "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
                 
                 success: function (status)
@@ -976,7 +991,7 @@ window.onclick = function(event) {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew10 = "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"&phonenumber="+phonenum;
+                    var urlnew10 = "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"&userphone="+phonenumber+"&fullname="+fullname;
                     var ref = cordova.InAppBrowser.open(urlnew10, '_blank', 'location=yes');  
                   }
                   else 
