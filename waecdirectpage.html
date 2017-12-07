@@ -1,0 +1,697 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- InstanceBegin template="/Templates/default.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+    <!-- InstanceBeginEditable name="doctitle" -->
+    <title>WAEC - Ghana</title>
+    <style type="text/css">
+<!--
+.style1 {font-family: Geneva, Arial, Helvetica, sans-serif}
+-->
+</style>
+    <!-- InstanceEndEditable -->
+    <link rel="STYLESHEET" type="text/css" href="include/waecdirect.css">
+    <style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	background-image: url(images/bg.jpg);
+	scrollbar-arrow-color: white;
+}
+
+
+#divfour
+{
+    width:100px;
+}
+-->
+
+</style>
+    <script type="text/javascript" src="dropdown.js"></script>
+    <script type="text/javascript">
+        function MM_preloadImages() { //v3.0
+            var d = document; if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { d.MM_p[j] = new Image; d.MM_p[j++].src = a[i]; }
+            }
+        }
+    </script>
+    <script type="text/javascript" src="dropdown.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/AdserveJScript.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            GetAdvert(divone, 190, 190, 5);
+            GetAdvert(divtwo, 190, 190, 5);
+            GetAdvert(divthree, 190, 190, 5);
+            GetAdvert(divfour, 300, 75, 5);
+            GetAdvert(divfive, 300, 250, 5);
+			GetAdvert(divsix, 300, 75, 5);
+
+
+        });
+
+
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+    <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+            <td colspan="2" valign="top">
+                <table width="200" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <img src="https://ghana.waecdirect.org/images/logo1.png" width="409" height="105">
+                        </td>
+                        <td>
+                            <img src="https://ghana.waecdirect.org/images/mainLogo1.jpg" width="501" height="105">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr valign="middle">
+            <td height="35" colspan="3" class="bgmenu">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    
+      
+    
+        <tr>
+            <td colspan="2">
+              <!-- InstanceBeginEditable name="body" -->
+              <table width="100" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table width="602" border="0" align="left" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td width="27%" align="left" valign="top" bgcolor="#CCCC33">
+                                        <table width="75" border="0" cellpadding="1" cellspacing="0">
+                                            <script language="javascript1.2" type="text/javascript">
+<!--
+                                                var browser = null;
+
+                                                //var browsers = new array('ie4', 'ie5', 'ie6', 'ns4', 'ns6');
+                                                var browserObj = null;
+
+                                                if (document.all) {
+                                                    browser = "ie4";
+                                                    browserObj = eval('document.all');
+                                                } else if (document.layers) {
+                                                    browser = "ns4";
+                                                    browserObj = eval('document.layers');
+                                                }
+
+                                                function SetPopUp() {
+                                                    displayresults('', 'results')
+                                                }
+
+                                                function displayresults(pgurl, pgname) {
+                                                    report = window.open(pgurl, pgname, 'scrollbars,width=550,height=600');
+                                                    report.focus();
+                                                }
+
+                                                function form_submit(e) {
+                                                    var candid = String(document.form1.candid.value);
+                                                    var examtype = String(document.form1.examtype.value);
+                                                    var examyear = String(document.form1.examyear.value);
+                                                    var serial = String(document.form1.serial.value);
+                                                    var pin = String(document.form1.pin.value);
+                                                    var ccandid = String(document.form1.ccandid.value);
+                                                    var cexamyear = String(document.form1.cexamyear.value);
+
+                                                    if (candid.length < 9) {
+                                                        alert("Invalid Index Number entered!\nIndex Number must not be less than 9 digits.");
+                                                        document.form1.candid.focus();
+                                                        return false;
+                                                    }
+                                                    if (examtype == "") {
+                                                        alert("You have not selected an Exam Type.");
+                                                        document.form1.examtype.focus();
+                                                        return false;
+                                                    }
+                                                    if (examyear.length != 4) {
+                                                        alert("Invalid Exam Year entry!\nExam Year must contain 4 digits e.g. 2003.");
+                                                        document.form1.examyear.focus();
+                                                        return false;
+                                                    }
+                                                    if (serial.length < 10 || serial.length > 12) {
+                                                        alert("Invalid Serial Number format!\nSerial Numbers must contain a character prefix followed by 9 or 11 digits e.g. G123456789.");
+                                                        document.form1.serial.focus();
+                                                        return false;
+                                                    }
+                                                    if (pin.length != 12) {
+                                                        alert("Invalid PIN format!\nPIN is a 12 digit number e.g. 123456789012.");
+                                                        document.form1.pin.focus();
+                                                        return false;
+                                                    }
+
+                                                    if ((candid != ccandid) || (examyear != cexamyear)) {
+                                                        alert("You have either not confirmed your Index Number and Exam Year or \n" +
+			  "they are not compatible with the ones you entered above. \n" +
+			  "Please confirm your Index Number and Exam Year!");
+                                                        //DisplayConfirm();
+                                                        return false;
+                                                    }
+
+
+                                                    if (examtype == "01") {
+
+                                                        e.preventDefault();
+                                                        var _formID = document.getElementById('form1');
+                                                        //dim url =""
+                                                        //CandID = trim(request.form("candid"))
+                                                        //ExamType = trim(request.form("examtype"))
+                                                        //OldExamType = trim(request.form("examtype"))
+                                                        //ReferPage = Request.Form("referpage")
+                                                        //ExamYear = trim(request.form("examyear"))
+
+                                                        //url = "results.asp?CandID="+candid+"&ExamType="+examtype+"
+
+                                                        $("#dialog-confirm").dialog({
+                                                            resizable: false,
+                                                            width: 600,
+                                                            modal: true,
+                                                            draggable: true,
+
+                                                            buttons: {
+                                                                "Agree": function () {
+
+                                                                    displayresults("", "results");
+                                                                    _formID.submit();
+                                                                    $(this).dialog("close");
+                                                                    return true;
+                                                                },
+                                                                "Disagree": function () {
+
+                                                                    $(this).dialog("close");
+                                                                    return false;
+                                                                },
+                                                                Cancel: function () {
+                                                                    $(this).dialog("close");
+                                                                    return false;
+                                                                }
+                                                            }
+                                                        });
+                                                        return false;
+                                                    }
+
+                                                    if (examtype == "08" && examyear >= 2014) {
+
+                                                        e.preventDefault();
+                                                        var _formID = document.getElementById('form1');
+                                                        //dim url =""
+                                                        //CandID = trim(request.form("candid"))
+                                                        //ExamType = trim(request.form("examtype"))
+                                                        //OldExamType = trim(request.form("examtype"))
+                                                        //ReferPage = Request.Form("referpage")
+                                                        //ExamYear = trim(request.form("examyear"))
+
+                                                        //url = "results.asp?CandID="+candid+"&ExamType="+examtype+"
+
+                                                        $("#dialog-confirm2").dialog({
+                                                            resizable: false,
+                                                            width: 600,
+                                                            modal: true,
+                                                            draggable: true,
+
+                                                            buttons: {
+                                                                "OK": function () {
+
+                                                                    displayresults("", "results");
+                                                                    _formID.submit();
+                                                                    $(this).dialog("close");
+                                                                    return true;
+                                                                },
+                                                                Cancel: function () {
+                                                                    displayresults("", "results");
+                                                                    _formID.submit();
+                                                                    $(this).dialog("close");
+                                                                    return true;
+                                                                }
+                                                            }
+                                                        });
+                                                        return false;
+                                                    }
+
+                                                    displayresults("", "results");
+                                                    return true;
+
+                                                }
+//-->
+                                            </script>
+                                            <tr>
+                                                <td align="left" valign="top" style="width: 320px" bgcolor="#CCCC33">
+                                                    <table border="0" align="left" cellpadding="0" cellspacing="0" id="mytb">
+                                                        <form action="https://ghana.waecdirect.org/results.asp" method="post" name="form1" target="results" id="form1"
+                                                        onsubmit="return form_submit(event);">
+                                                        <tr bgcolor="#000000">
+                                                            <td height="33" colspan="3" nowrap="nowrap">
+                                                                <font color="#FFFFFF" size="3" face="Geneva, Arial, Helvetica, sans-serif"><strong>WAECDIRECT-GHANA
+                                                                    ONLINE SERVICE</strong></font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr align="center" bgcolor="#FFFF33">
+                                                            <td height="38" colspan="3" nowrap="nowrap">
+                                                                <p>
+                                                                    <font color="#990066" size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong><font
+                                                                        color="#FF0000">Click <a href="https://resultconfirmation.waecgh.org/">here</a>
+                                                                        for Result Confirmation<br />
+                                                                        Click <a href="https://ghana.waecdirect.org/indexverify.htm">here</a> for Result Verification</font></strong></font></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr bgcolor="#666666">
+                                                            <td height="23" colspan="3" nowrap="nowrap">
+                                                                <strong><font color="#FFFFFF" face="Geneva, Arial, Helvetica, sans-serif">RESULT CHECKER
+                                                                </font></strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="24" colspan="3" nowrap="nowrap" bgcolor="#CC9900">
+                                                                <font color="#FFFFFF" size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>Enter
+                                                                    your examination information</strong></font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Index Number:</font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <input name="candid" type="text" id="candid" size="19" maxlength="10" autocomplete="off" />
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Examination
+                                                                    Type:</font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <select name="examtype" id="examtype">
+                                                                        <option selected="selected">-- select your exam type --</option>
+                                                                        <option value="01">W A S S C E (School)</option>
+                                                                        <option value="08">W A S S C E (Private)</option>
+                                                                        <option value="00">S S S C E</option>
+                                                                        <option value="03">G B C E (MAY/JUN)</option>
+                                                                        <option value="04">G B C E (NOV/DEC)</option>
+                                                                        <option value="05">A B C E (MAY/JUN)</option>
+                                                                        <option value="06">A B C E (NOV/DEC)</option>
+                                                                        <option value="07">B E C E</option>
+									<option value="09">B E C E (Private)</option>
+                                                                    </select>
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="35" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Examination
+                                                                    Year: </font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif"></font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <select name="examyear" id="examyear">
+                                                                        <option selected="selected">-- select year --</option>
+                                                                        <option value="2017">2017</option>
+                                                                        <option value="2016">2016</option>
+                                                                       <option value="2015">2015</option>
+																		<option value="2014">2014</option>
+                                                                        <option value="2013">2013</option>
+                                                                        <option value="2012">2012</option>
+                                                                        <option value="2011">2011</option>
+                                                                        <option value="2010">2010</option>
+                                                                        <option value="2009">2009</option>
+                                                                        <option value="2008">2008</option>
+                                                                        <option value="2007">2007</option>
+                                                                        <option value="2006">2006</option>
+                                                                        <option value="2005">2005</option>
+                                                                        <option value="2004">2004</option>
+                                                                        <option value="2003">2003</option>
+                                                                        <option value="2002">2002</option>
+                                                                        <option value="2001">2001</option>
+                                                                        <option value="2000">2000</option>
+                                                                        <option value="1999">1999</option>
+                                                                        <option value="1998">1998</option>
+                                                                        <option value="1997">1997</option>
+                                                                        <option value="1996">1996</option>
+                                                                        <option value="1995">1995</option>
+                                                                        <option value="1994">1994</option>
+                                                                        <option value="1993">1993</option>
+                                                                        <option value="1992">1992</option>
+                                                                        <option value="1991">1991</option>
+                                                                        <option value="1990">1990</option>
+                                                                    </select>
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                            <tr>
+                                                                <td height="24" colspan="3" nowrap="nowrap" bgcolor="#CC9900">
+                                                                    <font color="#FFFFFF" size="2" face="Geneva, Arial, Helvetica, sans-serif">
+                                                                        <strong>
+                                                                            Enter Date Of Birth (WASSCE (PRIVATE) results only!)
+                                                                        </strong>
+                                                                    </font>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="30" nowrap="nowrap">
+                                                                    <font face="Geneva, Arial, Helvetica, sans-serif">
+                                                                        <strong>
+                                                                            <font size="2">
+                                                                                Date Of Birth:
+                                                                            </font>
+                                                                        </strong>
+                                                                    </font>
+                                                                </td>
+                                                                <td height="30" nowrap="nowrap">
+                                                                    <div align="left">
+                                                                        <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                    </div>
+                                                                </td>
+                                                                <td height="30" nowrap="nowrap">
+
+                                                                    <select name="cday" id="cday">
+                                                                        <option selected="selected" value="">--day--</option>
+                                                                        <option>01</option>
+                                                                        <option>02</option>
+                                                                        <option>03</option>
+                                                                        <option>04</option>
+                                                                        <option>05</option>
+                                                                        <option>06</option>
+                                                                        <option>07</option>
+                                                                        <option>08</option>
+                                                                        <option>09</option>
+                                                                        <option>10</option>
+                                                                        <option>11</option>
+                                                                        <option>12</option>
+                                                                        <option>13</option>
+                                                                        <option>14</option>
+                                                                        <option>15</option>
+                                                                        <option>16</option>
+                                                                        <option>17</option>
+                                                                        <option>18</option>
+                                                                        <option>19</option>
+                                                                        <option>20</option>
+                                                                        <option>21</option>
+                                                                        <option>22</option>
+                                                                        <option>23</option>
+                                                                        <option>24</option>
+                                                                        <option>25</option>
+                                                                        <option>26</option>
+                                                                        <option>27</option>
+                                                                        <option>28</option>
+                                                                        <option>29</option>
+                                                                        <option>30</option>
+                                                                        <option>31</option>
+                                                                    </select>
+                                                                    <select name="cmonth" id="cmonth">
+                                                                        <option selected="selected" value="">--month--</option>
+                                                                        <option value="01">JAN</option>
+                                                                        <option value="02">FEB</option>
+                                                                        <option value="03">MAR</option>
+                                                                        <option value="04">APR</option>
+                                                                        <option value="05">MAY</option>
+                                                                        <option value="06">JUN</option>
+                                                                        <option value="07">JUL</option>
+                                                                        <option value="08">AUG</option>
+                                                                        <option value="09">SEP</option>
+                                                                        <option value="10">OCT</option>
+                                                                        <option value="11">NOV</option>
+                                                                        <option value="12">DEC</option>
+                                                                    </select>
+                                                                    <select name="cyear" id="cyear">
+                                                                        <option selected="selected" value="">--year--</option>
+                                                                        <script language="javascript">
+                                                                            var minOffset = 10, maxOffset = 100;
+                                                                            var thisYear = new Date().getFullYear();
+                                                                            var starter = thisYear - minOffset;
+                                                                            var ender = thisYear - maxOffset;
+                                                                            for (var i = starter; i >= ender; i--) {
+                                                                                document.write("<option value=\"" + i + "\">" + i + "</option>\n");
+                                                                            }
+                                                                        </script>
+                                                                    </select>
+                                                                </td>
+                                                            </tr>
+
+                                                        <tr>
+                                                            <td height="24" colspan="3" nowrap="nowrap" bgcolor="#CC9900">
+                                                                <font color="#FFFFFF" size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>Enter
+                                                                    your card security information</strong></font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Card Serial
+                                                                    Number: </font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <input name="serial" type="text" id="serial" size="19" maxlength="12" autocomplete="off" />
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="35" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">PIN:</font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <input name="pin" type="password" id="pin" size="19" maxlength="12" autocomplete="off" />
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="24" colspan="3" nowrap="nowrap" bgcolor="#CC9900">
+                                                                <font color="#FFFFFF" size="2" face="Geneva, Arial, Helvetica, sans-serif"><strong>Confirm
+                                                                    your examination information</strong></font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Index Number:
+                                                                </font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <input name="ccandid" type="text" id="ccandid" size="19" maxlength="10" autocomplete="off" />
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="35" nowrap="nowrap">
+                                                                <font face="Geneva, Arial, Helvetica, sans-serif"><strong><font size="2">Examination
+                                                                    Year:</font></strong></font>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <div align="left">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp; </font>
+                                                                </div>
+                                                            </td>
+                                                            <td height="30" nowrap="nowrap">
+                                                                <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                    <select name="cexamyear" id="select">
+                                                                        <option selected="selected">-- select year --</option>
+                                                                         <option value="2017">2017</option>
+                                                                        <option value="2016">2016</option>
+																		<option value="2015">2015</option>
+                                                                        <option value="2014">2014</option>
+                                                                        <option value="2013">2013</option>
+                                                                        <option value="2012">2012</option>
+                                                                        <option value="2011">2011</option>
+                                                                        <option value="2010">2010</option>
+                                                                        <option value="2009">2009</option>
+                                                                        <option value="2008">2008</option>
+                                                                        <option value="2007">2007</option>
+                                                                        <option value="2006">2006</option>
+                                                                        <option value="2005">2005</option>
+                                                                        <option value="2004">2004</option>
+                                                                        <option value="2003">2003</option>
+                                                                        <option value="2002">2002</option>
+                                                                        <option value="2001">2001</option>
+                                                                        <option value="2000">2000</option>
+                                                                        <option value="1999">1999</option>
+                                                                        <option value="1998">1998</option>
+                                                                        <option value="1997">1997</option>
+                                                                        <option value="1996">1996</option>
+                                                                        <option value="1995">1995</option>
+                                                                        <option value="1994">1994</option>
+                                                                        <option value="1993">1993</option>
+                                                                        <option value="1992">1992</option>
+                                                                        <option value="1991">1991</option>
+                                                                        <option value="1990">1990</option>
+                                                                    </select>
+                                                                </font>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td height="112" colspan="3" nowrap="nowrap">
+                                                                <div align="center">
+                                                                    <font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                        <input name="referpage" type="hidden" id="referpage" value="index.htm" />
+                                                                        <input name="Clear" type="reset" class="button" id="Clear" value="Clear" />
+                                                                    </font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">
+                                                                        <input name="Submit" type="submit" class="button" value="Submit" />
+                                                                    </font>
+                                                                </div>
+                                                                Have you had any problem checking your result earlier?<br />
+                                                                Send an email to:
+                                                                <br />
+                                                                <a href="mailto:WaecghanaSupport@fleettechltd.com" class="style17"><u>Online Support</u></a>
+                                                                <p> <div id="divsix">
+                                                    </div></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                        </tr>
+                                                        </form>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="2" valign="top" bgcolor="#FFFFCC">
+                                        <table width="565" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td colspan="2" bgcolor="#CC0033">
+                                                    <font color="#FFFFFF" size="3" face="Geneva, Arial, Helvetica, sans-serif"><strong>USING
+                                                        THE RESULT CHECKER</strong></font>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="308">
+                                                    <ol>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Enter your Index Number.
+                                                        </font></strong>
+                                                            <br>
+                                                        </li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Select the Type of Examination
+                                                            (e.g.&nbsp; WASSCE).<br>
+                                                        </font></strong></li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Select your Examination
+                                                            Year eg. 2003.</font></strong><br>
+                                                        </li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Enter the Card Serial
+                                                            Number found on the reverse side of your Scratch card. </font></strong>
+                                                            <br>
+                                                        </li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Enter the 12-digit Personal
+                                                            Identification Number (PIN) on your Scratch card eg. 012345678912.</font></strong><br>
+                                                        </li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Confirm your Index Number
+                                                            and Examination Year. This is to ensure that your examination information is correct.</font></strong><br>
+                                                        </li>
+                                                        <li><strong><font face="Geneva, Arial, Helvetica, sans-serif">Click on Submit and wait
+                                                            for the display in the popup window.</font> This may take several minutes. </strong>
+                                                        </li>
+                                                    </ol>
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">&nbsp;
+
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table width="524" border="0" cellspacing="3" cellpadding="3" align="right">
+                                                        <tr valign="bottom">
+                                                            <td width="226">
+                                                                <div id="divone">
+                                                                </div>
+                                                            </td>
+                                                            <td width="277">
+                                                                <div id="divtwo">
+                                                                </div>
+                                                            </td>
+                                                            <td width="277">
+                                                                <div id="divthree">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+              </table>
+<!-- InstanceEndEditable -->
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000"
+                    bgcolor="#CD0536">
+                    <tr>
+                        <th height="14" class="smalltext  style1" scope="col">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="60%" align="left">
+                                        <strong><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Copyright WAEC(Ghana),
+                                            2013</font></strong>
+                                    </td>
+                                    <td width="40%">
+                                        <table width="200" border="0" align="right" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="73">
+                                                    <strong><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Powered by</font></strong>
+                                                </td>
+                                              
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+  
+</body>
+<!-- InstanceEnd -->
+</html>
