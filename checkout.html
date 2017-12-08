@@ -162,9 +162,9 @@ var country= getQueryVariable("country");
 
         var totam = a*q;
         var totam2 = b*q2;
-        var totam3 = (c*q3)-4;
-        var totam5 = (d*q5)-12;
-        var totam10 = (e*q10)-20;
+        var totam3 = c*q3;
+        var totam5 = d*q5;
+        var totam10 = e*q10;
        
        // alert(jd.fullname);
          $('#bamount').html(totam);
@@ -879,7 +879,7 @@ window.onclick = function(event) {
             var name3=$("#name3").val();
             var unitprice3 = $("#unitprice3").val(); 
             var quantity3 = $("#quantity3").val(); 
-             var total3 = (unitprice3*quantity3)-4;
+             var total3 = unitprice3*quantity3;
             unitprice3 = $.trim(unitprice3);
           
 
@@ -930,7 +930,7 @@ window.onclick = function(event) {
             var name5=$("#name5").val();
             var unitprice5 = $("#unitprice5").val(); 
             var quantity5 = $("#quantity5").val(); 
-             var total5 = (unitprice5*quantity5)-12;
+             var total5 = unitprice5*quantity5;
             unitprice5 = $.trim(unitprice5);
           
 
@@ -982,7 +982,7 @@ window.onclick = function(event) {
             var name10=$("#name10").val();
             var unitprice10 = $("#unitprice10").val();
             var quantity10 = $("#quantity10").val();  
-             var total10 = (unitprice10*quantity10)-20;
+             var total10 = unitprice10*quantity10;
             unitprice10 = $.trim(unitprice10);
           
 
@@ -1030,7 +1030,7 @@ window.onclick = function(event) {
 
 <script type="text/javascript">
          $(document).ready(function() {
-         	
+
            $("#facebook").click(function(event) {
             
                     alert("Redirecting to our facebook page...");
