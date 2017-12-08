@@ -793,32 +793,37 @@ window.onclick = function(event) {
                  type: "GET",
                 url: "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"userphone="+phonenumber+"&fullname="+fullname,
                // data: dataString,
-                crossDomain: true,
-                cache: false,
-                dataType:'json',
+                // crossDomain: true,
+                // cache: false,
+                // dataType:'json',
                 success: function (status)
                 {
                   if (status)
                   {
                     alert("Redirecting to payment...");
-                    var urlnew = "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&userphone="+phonenumber+"&fullname="+fullname;
+                    var urlnew1 = "https://waecresultschecker.com/checkout/checkout.php?name="+name+"&unitprice="+unitprice+"&quantity="+quantity+"&userphone="+phonenumber+"&fullname="+fullname;
                     //console.log(phonenumber);
-                    var ref = cordova.InAppBrowser.open(urlnew, '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open(urlnew1, '_blank', 'location=no');  
                   }
                   else 
                   {
                     //alert(status);
                     alert("Sorry, we could not process your request, please try again");
-                    alert(phonenum);
+                    //alert(phonenum);
                   }
                 }
 
               });
             });
+      });
+
+</script>
 
 
-
-
+ <script type="text/javascript">
+         $(document).ready(function() {
+           var phonenumber = phonenum;
+          
            $("#twocards").click(function(event) {
 
             var name2=$("#name2").val();
@@ -852,7 +857,7 @@ window.onclick = function(event) {
                   {
                     alert("Redirecting to payment...");
                     var urlnew2 = "https://waecresultschecker.com/checkout/checkout.php?name="+name2+"&unitprice="+unitprice2+"&quantity="+quantity2+"&userphone="+phonenumber+"&fullname="+fullname;
-                    var ref = cordova.InAppBrowser.open(urlnew2, '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open(urlnew2, '_blank', 'location=no');  
                   }
                   else 
                   {
@@ -899,7 +904,7 @@ window.onclick = function(event) {
                   {
                     alert("Redirecting to payment...");
                     var urlnew3 = "https://waecresultschecker.com/checkout/checkout.php?name="+name3+"&unitprice="+unitprice3+"&quantity="+quantity3+"&userphone="+phonenumber+"&fullname="+fullname;
-                    var ref = cordova.InAppBrowser.open(urlnew3, '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open(urlnew3, '_blank', 'location=no');  
                   }
                   else 
                   {
@@ -945,7 +950,7 @@ window.onclick = function(event) {
                   {
                     alert("Redirecting to payment...");
                     var urlnew5 = "https://waecresultschecker.com/checkout/checkout.php?name="+name5+"&unitprice="+unitprice5+"&quantity="+quantity5+"&userphone="+phonenumber+"&fullname="+fullname;
-                    var ref = cordova.InAppBrowser.open(urlnew5, '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open(urlnew5, '_blank', 'location=no');  
                   }
                   else 
                   {
@@ -992,7 +997,7 @@ window.onclick = function(event) {
                   {
                     alert("Redirecting to payment...");
                     var urlnew10 = "https://waecresultschecker.com/checkout/checkout.php?name="+name10+"&unitprice="+unitprice10+"&quantity="+quantity10+"&userphone="+phonenumber+"&fullname="+fullname;
-                    var ref = cordova.InAppBrowser.open(urlnew10, '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open(urlnew10, '_blank', 'location=no');  
                   }
                   else 
                   {
@@ -1016,7 +1021,7 @@ window.onclick = function(event) {
       //     if(status == '0') 
       //           {  
       //              alert("Redirecting to payment...");
-      //           var ref = cordova.InAppBrowser.open(url1, '_blank', 'location=yes');  
+      //           var ref = cordova.InAppBrowser.open(url1, '_blank', 'location=no');  
 
       //           } 
       //       else if(status == '-1') 
@@ -1037,14 +1042,14 @@ window.onclick = function(event) {
            $("#facebook").click(function(event) {
             
                     alert("Redirecting to our facebook page...");
-                    var ref = cordova.InAppBrowser.open('https://www.facebook.com/WaecResultsCheckers', '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open('https://www.facebook.com/WaecResultsCheckers', '_blank', 'location=no');  
                    });
 
 
            $("#playstore").click(function(event) {
             
                     alert("Redirecting to our playstore app page...");
-                    var ref = cordova.InAppBrowser.open('https://play.google.com/store/apps/details?id=com.waecresultscheckercenter.app', '_blank', 'location=yes');  
+                    var ref = cordova.InAppBrowser.open('https://play.google.com/store/apps/details?id=com.waecresultscheckercenter.app', '_blank', 'location=no');  
                    });
 
            
